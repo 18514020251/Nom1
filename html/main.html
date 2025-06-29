@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人任务管理系统</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="logout-confirm" id="logoutConfirm">
+        <div class="logout-confirm-icon">
+            <i class="fas fa-sign-out-alt"></i>
+        </div>
+        <h3>确认注销账号</h3>
+        <p>您确定要注销当前账号吗？这将退出登录并返回到登录页面。</p>
+        <div class="logout-confirm-buttons">
+            <button class="logout-confirm-btn logout-confirm-no" id="logoutCancel">取消</button>
+            <button class="logout-confirm-btn logout-confirm-yes" id="logoutConfirmBtn">确定注销</button>
+        </div>
+    </div>
+    <div class="delete-confirm" id="deleteConfirm">
+        <h3><i class="fas fa-exclamation-triangle"></i> 确认删除</h3>
+        <p>确定要删除这个任务吗？此操作不可恢复。</p>
+        <div class="confirm-buttons">
+            <button class="confirm-btn confirm-yes" id="confirmDelete">确定删除</button>
+            <button class="confirm-btn confirm-no" id="cancelDelete">取消</button>
+        </div>
+    </div>
+
+    <div class="floating-toast" id="loginPrompt">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span>请先登录账号</span>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <div class="setting-up">
+        <div class="setting-up-module">
+            <div class="setting-up-title">系统设置</div>
+            <button class="setting-up-close">×</button>
+        </div>
+        <div class="setting-up-content">
+            <div class="setting-up-sidebar">
+                <ul>
+                    <li><i class="fa-solid fa-circle-info active"></i> 关于系统</li>
+                </ul>
+            </div>
+            <div class="setting-up-main">
+                <a href="../操作文档.docx">详细内容请看操作文档</a>
+                <span class="Version_number">版本:1.2.1</span>
+                <button class="logout-btn" id="logoutButton">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>注销账号</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="add-user-form">
+        <div class="add-user-form-module">
+            <span class="add-user-form-title"><strong>添加任务</strong></span>
+            <button class="add-user-form-close">x</button>
+        </div>
+        <form class="add_form">
+            <input type="text" placeholder="任务标题" id="title" name="title">
+            <input type="text" placeholder="详细信息" id="detail" name="detail">
+            <input type="text" placeholder="截止日期、例如2025-1-1" id="deadline" name="deadline">
+            <button class="add-user-form-submit" type="submit">添加</button>
+        </form>
+    </div>
+    <div class="flaydiv">欢迎使用</div>   
+    <div class="personal_information">
+        <div class="personal_information_title">
+            <i class="fa-solid fa-circle-user"></i>个人信息
+        </div>
+        <div class="personal_information_div"> 
+            <div class="avatar-container">
+                <div class="avatar-preview" id="avatarPreview">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="avatar-overlay">
+                  <i class="fa-solid fa-camera"></i>
+                </div>
+                <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
+              </div>
+
+        <ul class="personal_information_ul">
+            <li class="username"><i class="fa-solid fa-user"></i> 姓名:<span class="username_span">---</span></li>
+            <li class="age"><i class="fa-solid fa-cake-candles"></i> 年龄:--岁</li>
+            <li class="gender"><i class="fa-solid fa-venus-mars"></i> 性别:---</li>
+        </ul>
+    </div>
+        <div class="Functional_modules">
+            <div class="Functional_modules_title">`
+                <i class="fa-solid fa-list"></i>功能模块
+            </div>
+            <ul class="Functional_modules_ul">
+                <li class="add"><i class="fa-solid fa-plus"></i>增加任务</li>
+                <li class="set"><i class="fa-solid fa-gear"></i>设置信息</li>
+                <li class="login"><i class="fa-solid fa-user-plus"></i>登录账号</li>
+            </ul>
+        </div>
+    </div>
+    <div class="Ribbon_Module">
+        <div class="serach_for_moduls">
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="搜索任务、项目或关键词" id="search" name="search">
+                <div class="progress-container">
+                    <span class="progress-text">今日已过:</span>
+                    <span class="progress-value" id="progress-value">0%</span>
+                    <div class="day-progress-container">
+                        <div class="day-progress-bar" id="day-progress-bar"></div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="Statistics_module">
+                <div class="total">
+                    <div class="total_div">
+                        <span class="total_span">总任务数</span>
+                        <strong><span class="total_span_num">--</span></strong>
+                    </div>
+                    <div class="total_i">
+                        <div class="total_i_div"><i class="fa-solid fa-scroll"></i></div>
+                    </div>
+                </div>
+                <div class="urgent">
+                    <div class="urgent_div">
+                        <span class="urgent_span">紧急任务数</span>
+                        <strong><span class="urgent_span_num">--</span></strong>
+                    </div>
+                    <div class="urgent_i">
+                        <div class="urgent_i_div"><i class="fa-solid fa-exclamation"></i></div>
+                    </div>
+                </div>
+                <div class="ok">
+                    <div class="ok_div">
+                        <span class="ok_span">完成数</span>
+                        <strong><span class="ok_span_num">--</span></strong>
+                    </div>
+                    <div class="ok_i">
+                        <div class="ok_i_div"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                </div>
+                <div class="overdue">
+                    <div class="overdue_div">
+                        <span class="overdue_span">过期任务数</span>
+                        <strong><span class="overdue_span_num">--</span></strong>
+                    </div>
+                    <div class="overdue_i">
+                        <div class="overdue_i_div"><i class="fa-solid fa-file-excel"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="task-container">
+            <h2 class="section-title">待办任务</h2>
+            <div class="tasks-wrapper">
+                <div class="ifnull">
+                    <div class="loading">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p>等待添加事务</p>
+                </div>                           
+            </div>
+        </div>
+        <div class="complete-allinformation">
+            <h3 class="complete-title">已完成</h3>
+            <div class="completed-tasks-container">
+            </div>
+        </div>
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>任务标题</th>
+                            <th>详细信息</th>
+                            <th><i class="fa-solid fa-calendar"></i>截止日期</th>
+                            <th>操作</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody">
+                        
+                    </tbody>
+                </table>
+            
+
+</body>
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const token = localStorage.getItem('token');
+    </script>
+</html>

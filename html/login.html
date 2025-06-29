@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录/注册</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="flaydiv"></div>
+    <i class="fa-solid fa-cloud cloudone1" ></i>
+    <i class="fa-solid fa-cloud cloudtwo1" ></i>
+    <h1 class="blue">个人任务管理系统</h1>
+    <!-- 登录 -->
+    <div class="login">
+        <div class="login-box">
+            <div class="title">
+
+                
+                <h2 class="login-title blue"><i class="fa-solid fa-arrow-right"></i>登录</h2>
+                <h2 class="enroll-title pink"><i class="fa-solid fa-user-plus"></i>注册</h2>
+                <p class="jump pink">将在6秒后跳转到登录页面</p>
+            </div>
+            <form>
+                <div class="input-box">
+                    <input type="text"  placeholder="&nbsp;账户名" id="username" class="input3 skyblue" >
+                    <p class="username_err"></p>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input1 skyblue" placeholder="&nbsp;密码" id="password">
+                    <p class="password_err"></p>
+                </div>
+                <div class="input-box Double-confirmation">
+                    <input type="password" class="input2 skyblue"  placeholder="&nbsp;二次密码" id="password2">
+                    <p class="password_err2"></p>
+                </div>
+                <div class="input-box inputremove">
+                    <button type="button"><i class="fa-solid fa-arrow-right fa-fade"></i>登录</button>
+                    <p class="status_information"></p>
+                </div>
+            </form>
+            <div class="enroll-box">
+                <a class="enroll">还没有?点击注册</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../js/login.js"></script>
+</html>

@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s;
+}
+
+body {
+    background: skyblue;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.flaydiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4e99e8, #2c6eb5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    animation: flyOut 1s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes flyOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+h1.title {
+    margin: 70px 0 80px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.5rem;
+    max-width: 90%;
+}
+
+.blue {
+    color: transparent;
+    text-shadow:
+        0 0 1px #fff,
+        -1px -1px 0 #4e99e8,
+        1px -1px 0 #4e99e8,
+        -1px 1px 0 #4e99e8,
+        1px 1px 0 #4e99e8;
+}
+.pink {
+    color: transparent;
+    text-shadow:
+        0 0 1px #fff,
+        -1px -1px 0 #8c18ff,
+        1px -1px 0 #8c18ff,
+        -1px 1px 0 #8c18ff,
+        1px 1px 0 #8c18ff;
+}
+
+.login {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.login-box {
+    margin: 0 auto;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(2, 2, 0, 0.3);
+    padding: 30px;
+}
+
+.input-box {
+    margin: 30px auto;
+    width: 100%;
+    margin-left: 66px;
+}
+
+
+
+.input-radio {
+    display: flex; 
+    align-items: center; /* 垂直居中 */
+    height: auto;
+    margin-left: 140px;
+}
+
+.radio-inline {
+    display: flex;
+    margin-right: 70px;
+    font-size: 40px;
+    color: white;
+    width: 30px;
+}
+
+
+.radio-inline input {
+    margin: 0 auto;
+}
+
+.input-box input {
+    width: 300px;
+    height: 40px;
+    outline: none;
+    background: transparent;
+    margin: 10px auto;
+    transition: all 0.5s;
+    border-radius: 5px;
+}
+
+.input-box .skyblue:focus {
+    border: 2px solid #4e99e8;
+}
+.input-box .ffa9ff:focus {
+    border: 2px solid #8c18ff;
+}
+
+.input-box .input2:focus {
+    border: 2px solid #8c18ff;
+}
+
+
+.input-box button {
+    width: 300px;
+    height: 40px;
+    outline: none;
+    margin: 10px auto;
+    transition: all 0.5s;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+
+.input-box button:active {
+    animation: buttonClick 0.5s ease;
+}
+
+@keyframes buttonClick {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.selected {
+    color: #4e99e8;
+}
+
+.selected1 {
+    color: #8c18ff;
+}
+
+.cloudone1 {
+    position: absolute;
+    top: 300px;
+    left: 230px;
+    font-size: 100px;
+    color: #fff;
+}
+
+.cloudone2 {
+    position: absolute;
+    top: 300px;
+    left: 580px;
+    font-size: 110px;
+    color: #fff;
+}
+
+
+.cloudtwo1 {
+    position: absolute;
+    top: 500px;
+    left: 900px;
+    font-size: 100px;
+    color: #fff;
+}
+
+.cloudtwo2 {
+    position: absolute;
+    top: 500px;
+    left: 1250px;
+    font-size: 100px;
+    color: #fff;
+}
+
+.bodybgc1{
+    background-color: skyblue;
+}
+
+.bodybgc2{
+    background-color: #ffdaff
+}
+.login-box1{
+    border: 3px solid #4e99e8;
+}
+.login-box2{
+    border: 3px solid #8c18ff;
+}
+
+.button_color1 {
+    background-color: #4e99e8;
+    border: 2px solid #4e99e8;
+    color: black;
+}
+
+.button_color2 {
+    background-color: #8c18ff;
+    border: 2px solid #8c18ff;
+    color: #fff;
+}
+
+.ffa9ff {
+    border: 2px solid #ffa9ff;
+}
+
+.skyblue{
+    border: 2px solid skyblue;
+}
+
+.err_massage {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.fullscreen-div1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4e99e8;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    animation: flyIn1 1s ease-out forwards;
+}
+
+@keyframes flyIn1 {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/user_information.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<i class="fa-solid fa-cloud cloudone1" id="cloudone1"></i>
+<i class="fa-solid fa-cloud cloudtwo1" id="cloudtwo1"></i>
+    <div class="flaydiv fullscreen-div">欢迎使用</div>
+    <h1 class="title blue">首次使用，我们需要您的个人信息</h1>
+    <div class="login">
+        <div class="login-box login-box1">
+            <form>
+                <div class="input-radio">
+                    <span class="radio-inline selected"  id="male">
+                        男
+                    </span>
+                    <span class="radio-inline" id="female">
+                         女
+                    </span>
+                </div>
+                <div class="input-box">
+                    <input type="text"  placeholder="&nbsp;名字" id="username" class="skyblue" >
+                </div>
+                <div class="input-box">
+                    <input type="text" class=" skyblue" placeholder="&nbsp;年龄" id="age">
+                </div>
+                <div class="input-box">
+                    <input type="email" class=" skyblue"  placeholder="&nbsp;邮箱" id="email">
+                </div>
+                <div class="input-box">
+                    <button type="button" class="button_color1"><i class="fa-solid fa-arrow-right fa-fade"></i>&nbsp;&nbsp;下一步</button>
+                    <p class="err_massage"></p>
+                </div>
+            </form>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/user_inforation.js"></script>
+    <script>
+         const token = localStorage.getItem('token')
+    </script>
+</html>

@@ -1,0 +1,283 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    transition: all 1s;
+}
+html{
+    color: skyblue;
+}
+
+
+body{
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    background-color: skyblue;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+}
+
+.loaded {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+h1{
+    margin-top: 70px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 60px;
+}
+
+
+.login{
+    width: 100%;
+}
+
+.login-box{
+    width: 500px;
+    margin: 80px auto;
+    border: 3px solid #4e99e8;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(2, 2, 0, 0.3);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.login-title {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    font-size: 40px;
+    position: absolute;
+}
+
+.enroll-title {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    font-size: 40px;
+    position: absolute;
+    opacity: 0;
+}
+
+
+
+/* 输入框样式 */
+.input-box {
+    margin: 20px auto;
+    width: 300px;
+    height: 80px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    background: transparent;
+    margin: 10px auto;
+    transition: all 0.5s;
+    border-radius: 5px;
+}
+
+.input-box :focus{
+    border: 2px solid #4e99e8;
+}
+
+
+.input-box .input2:focus{
+    border: 2px solid #8c18ff;
+}
+
+.input-box button{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    background: #4e99e8;
+    border: 2px solid #4e99e8;
+    margin: 10px auto;
+    transition: all 0.5s;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+
+.input-box button:active{
+    animation: buttonClick 0.5s ease;
+}
+
+@keyframes buttonClick {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* 注册框样式 */
+.enroll-box {
+    margin-bottom: 40px;
+    width: 121px;
+    margin-left: 65%;
+    position: relative;
+}
+
+.enroll{
+    display: block;
+    width: 140px;
+    text-decoration: none;
+    color: #4e99e8;
+}
+
+i{
+    margin-right: 10px;
+}
+
+.username_err ,.password_err{
+    color:red;
+    font-size: 14px;
+}
+
+.status_information {
+    font-size: 14px;
+    color: rgb(69, 255, 69);
+    transition: none;
+}
+
+.Registration_passed {
+    color: rgb(69, 255, 69);
+}
+.Registration_failed {
+    color: red;
+}
+
+.jump {
+    margin-top: 130px;
+    font-size: 30px;
+    color: #fff;
+    transition: all 1s;
+    opacity: 0;
+}
+
+.fa-cloud {
+    color: white;
+}
+
+body{
+    position: relative;
+}
+
+.cloudone1 {
+    position: absolute;
+    top: 300px;
+    left: 230px;
+    font-size: 100px;
+}
+
+.cloudone2 {
+    position: absolute;
+    top: 300px;
+    left: 580px;
+    font-size: 110px;
+}
+
+
+.cloudtwo1 {
+    position: absolute;
+    top: 500px;
+    left: 900px;
+    font-size: 100px;
+}
+.cloudtwo2 {
+    position: absolute;
+    top: 500px;
+    left: 1250px;
+    font-size: 100px;
+}
+
+.Double-confirmation{
+    opacity: 0;
+}
+
+.inputremove {
+    position: relative;
+    top: -100px;
+}
+
+.password_err2{
+    color: red;
+    font-size: 14px;
+}
+
+
+/* 过渡动画 */
+.fullscreen-div {
+    position: fixed;
+    top: -70px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #4e99e8, #2c6eb5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    animation: flyIn 1s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes flyIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.blue {
+    color: transparent;
+    text-shadow: 
+        0 0 1px #fff,
+        -1px -1px 0 #4e99e8,
+        1px -1px 0 #4e99e8,
+        -1px 1px 0 #4e99e8,
+        1px 1px 0 #4e99e8;
+}
+
+.pink {
+    color: transparent;
+    text-shadow: 
+        0 0 1px #fff,
+        -1px -1px 0 #8c18ff,
+        1px -1px 0 #8c18ff,
+        -1px 1px 0 #8c18ff,
+        1px 1px 0 #8c18ff;
+}
+
+.ffa9ff{
+    border: 2px solid #ffa9ff;
+}
+
+.skyblue{
+    border: 2px solid skyblue;
+}
+
