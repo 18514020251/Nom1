@@ -9,6 +9,7 @@ let currentDeleteType = null;
 // 唯一定时器
 let searchTimeout = null;
 
+
 const searchInput = document.getElementById('search');
 const login = document.querySelector('.login');
 const add = document.querySelector('.add');
@@ -691,6 +692,7 @@ function userInformationRenderingandjudgment() {
                     globalTasks = globalTasks.filter(task => task['num-id'] != taskId);
                     renderTasks(globalTasks);
                     showToast('任务已完成', 'success');
+
                     fetchAndRenderFinishedTasks();
                 }, { once: true });
             })

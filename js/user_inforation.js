@@ -101,8 +101,8 @@ maleOption.addEventListener('click', function() {
     cloudtwo.classList.add('cloudtwo1');
     cloudone.classList.remove('cloudone2');
     cloudtwo.classList.remove('cloudtwo2');
-    body.classList.add('bodybgc1');
-    body.classList.remove('bodybgc2');
+    // body.classList.add('bodybgc1');
+    // body.classList.remove('bodybgc2');
     title.classList.add('blue');
     title.classList.remove('pink');
     login_box.classList.add('login-box1');
@@ -124,8 +124,8 @@ femaleOption.addEventListener('click', function() {
     cloudtwo.classList.add('cloudtwo2');
     cloudone.classList.remove('cloudone1');
     cloudtwo.classList.remove('cloudtwo1');
-    body.classList.add('bodybgc2');
-    body.classList.remove('bodybgc1');
+    // body.classList.add('bodybgc2');
+    // body.classList.remove('bodybgc1');
     title.classList.add('pink');
     title.classList.remove('blue')
     login_box.classList.add('login-box2');
